@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<entity-mappings ptype="MONOLITH" ppkg="com.github.murilompo.transferscheduling" epkg="domain" v="5.4.3" rws="_16316198940252" Pws="_16316198940252" cws="_16316198940252" persistenceUnitName="DEFAULT_PU" sm="false" xs="false" id="_16316198940241" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <entity compositePrimaryKeyClass="FeesRulesEntityPK" abs="false" class="FeesRulesEntity" v="true" jbn="false" xre="false" m="false" rootElement="_16316198940241" id="_16316199050403">
+        <attributes>
+            <basic optional="false" attribute-type="Long" v="true" xvt="" name="priority" ft="false" id="_16316200428537">
+                <xwm/>
+                <xm/>
+                <column name="PRIORITY" unique="false" nullable="false" insertable="true" updatable="true" precision="0"/>
+            </basic>
+            <basic optional="false" attribute-type="Integer" v="true" xvt="" name="maximumDays" ft="false" id="_163162391279831">
+                <xwm/>
+                <xm/>
+                <column name="MAXIMUM_DAYS" unique="false" nullable="false" insertable="true" updatable="true" precision="0"/>
+            </basic>
+            <basic optional="false" attribute-type="java.math.BigDecimal" v="true" xvt="" name="minimumValue" ft="false" id="_16317313225803">
+                <xwm/>
+                <xm/>
+                <column name="MINIMUM_VALUE" unique="false" nullable="false" insertable="true" updatable="true" precision="20" scale="2"/>
+            </basic>
+            <basic attribute-type="java.math.BigDecimal" v="true" xvt="" name="percentageFee" id="_16316201007418">
+                <xwm/>
+                <xm/>
+                <bv>
+                    <pz/>
+                </bv>
+                <column name="PERCENTAGE_FEE" unique="false" nullable="true" insertable="true" updatable="true" precision="8" scale="8"/>
+            </basic>
+            <basic attribute-type="java.math.BigDecimal" v="true" xvt="" name="singleFixedFee" id="_16316201384139">
+                <xwm/>
+                <xm/>
+                <bv>
+                    <pz/>
+                </bv>
+                <column name="SINGLE_FIXED_FEE" unique="false" nullable="true" insertable="true" updatable="true" precision="20" scale="2"/>
+            </basic>
+            <basic attribute-type="java.math.BigDecimal" v="true" xvt="" name="recurringFixedFee" id="_163162379818230">
+                <xwm/>
+                <xm/>
+                <bv>
+                    <pz/>
+                </bv>
+                <column name="RECURRING_FIXED_FEE" unique="false" nullable="true" insertable="true" updatable="true" precision="20" scale="2"/>
+            </basic>
+            <id attribute-type="Long" v="true" xvt="" name="id" ft="false" id="_16316199050654">
+                <xwm/>
+                <xm/>
+                <column name="ID" unique="false" nullable="false" insertable="true" updatable="true"/>
+                <generated-value strategy="IDENTITY"/>
+            </id>
+        </attributes>
+        <nq e="false" name="FeesRulesEntity.findAll">
+            <query>Select e from FeesRulesEntity e</query>
+        </nq>
+        <nq e="false" name="FeesRulesEntity.findByActive">
+            <query>Select f from FeesRulesEntity f where f.active=:active</query>
+        </nq>
+        <nq e="false" name="FeesRulesEntity.findByPriority">
+            <query>Select f from FeesRulesEntity f where f.priority=:priority</query>
+        </nq>
+        <nq e="false" name="FeesRulesEntity.findByPercentageFee">
+            <query>Select f from FeesRulesEntity f where f.percentageFee=:percentageFee</query>
+        </nq>
+        <nq e="false" name="FeesRulesEntity.findBySingleFixedFee">
+            <query>Select f from FeesRulesEntity f where f.singleFixedFee=:singleFixedFee</query>
+        </nq>
+        <nq e="false" name="FeesRulesEntity.findByRecurringFixedFee">
+            <query>Select f from FeesRulesEntity f where f.recurringFixedFee=:recurringFixedFee</query>
+        </nq>
+        <nq e="false" name="FeesRulesEntity.findByRecurringFixedFee">
+            <query>Select f from FeesRulesEntity f where f.recurringFixedFee=:recurringFixedFee</query>
+        </nq>
+        <nq e="false" name="FeesRulesEntity.findByRecurringFixedFee">
+            <query>Select f from FeesRulesEntity f where f.recurringFixedFee=:recurringFixedFee</query>
+        </nq>
+        <nq e="false" name="FeesRulesEntity.findByMaximumDays">
+            <query>Select f from FeesRulesEntity f where f.maximumDays=:maximumDays</query>
+        </nq>
+        <nq e="false" name="FeesRulesEntity.findByMinimumValue">
+            <query>Select f from FeesRulesEntity f where f.minimumValue=:minimumValue</query>
+        </nq>
+        <table name="FEES_RULES"/>
+    </entity>
+    <entity compositePrimaryKeyClass="TransferSchedulingEntityPK" abs="false" class="TransferSchedulingEntity" v="true" jbn="false" xre="false" m="false" rootElement="_16316198940241" id="_16318681698183">
+        <attributes>
+            <basic optional="false" attribute-type="String" v="true" xvt="" name="sourceAccount" ft="false" id="_16318683267626">
+                <xwm/>
+                <xm/>
+                <column name="SOURCE_ACCOUNT" unique="false" nullable="false" insertable="true" updatable="true" length="6"/>
+            </basic>
+            <basic optional="false" attribute-type="String" v="true" xvt="" name="targetAccount" ft="false" id="_16318683506417">
+                <xwm/>
+                <xm/>
+                <column name="TARGET_ACCOUNT" unique="false" nullable="false" insertable="true" updatable="true" length="6"/>
+            </basic>
+            <basic optional="false" attribute-type="java.math.BigDecimal" v="true" xvt="" name="amount" ft="false" id="_16318683711698">
+                <xwm/>
+                <xm/>
+                <column name="AMOUNT" unique="false" nullable="false" insertable="true" updatable="true" precision="20" scale="2"/>
+            </basic>
+            <basic optional="false" attribute-type="java.math.BigDecimal" v="true" xvt="" name="fee" ft="false" id="_16318684058089">
+                <xwm/>
+                <xm/>
+                <column name="FEE" unique="false" nullable="false" insertable="true" updatable="true" precision="20" scale="2"/>
+            </basic>
+            <basic optional="false" attribute-type="java.time.LocalDate" v="true" xvt="" name="schedulingDate" ft="false" id="_163186846630510">
+                <xwm/>
+                <xm/>
+                <column name="SCHEDULING_DATE" unique="false" nullable="false" insertable="true" updatable="true"/>
+            </basic>
+            <basic optional="false" attribute-type="java.time.LocalDate" v="true" xvt="" name="processingDate" ft="false" id="_163186847630411">
+                <xwm/>
+                <xm/>
+                <column name="PROCESSING_DATE" unique="false" nullable="false" insertable="true" updatable="true"/>
+            </basic>
+            <id attribute-type="Long" v="true" xvt="" name="id" ft="false" id="_16318681698214">
+                <xwm/>
+                <xm/>
+                <column name="ID" unique="false" nullable="false" insertable="true" updatable="true"/>
+                <generated-value strategy="IDENTITY"/>
+            </id>
+        </attributes>
+        <nq e="false" name="TransferSchedulingEntity.findAll">
+            <query>Select e from TransferSchedulingEntity e</query>
+        </nq>
+        <nq e="false" name="TransferSchedulingEntity.findBySourceAccount">
+            <query>Select t from TransferSchedulingEntity t where t.sourceAccount=:sourceAccount</query>
+        </nq>
+        <nq e="false" name="TransferSchedulingEntity.findByTargetAccount">
+            <query>Select t from TransferSchedulingEntity t where t.targetAccount=:targetAccount</query>
+        </nq>
+        <nq e="false" name="TransferSchedulingEntity.findByAmount">
+            <query>Select t from TransferSchedulingEntity t where t.amount=:amount</query>
+        </nq>
+        <nq e="false" name="TransferSchedulingEntity.findByFee">
+            <query>Select t from TransferSchedulingEntity t where t.fee=:fee</query>
+        </nq>
+        <nq e="false" name="TransferSchedulingEntity.findBySchedulingDate">
+            <query>Select t from TransferSchedulingEntity t where t.schedulingDate=:schedulingDate</query>
+        </nq>
+        <nq e="false" name="TransferSchedulingEntity.findByProcessingDate">
+            <query>Select t from TransferSchedulingEntity t where t.processingDate=:processingDate</query>
+        </nq>
+        <table name="TRANSFER_SCHEDULING"/>
+    </entity>
+    <c/>
+    <wsl>
+        <ws n="Main" id="_16316198940252">
+            <i ref="_16318681698183" x="386" y="115"/>
+            <i ref="_16316199050403" x="154" y="115"/>
+        </ws>
+    </wsl>
+</entity-mappings>
